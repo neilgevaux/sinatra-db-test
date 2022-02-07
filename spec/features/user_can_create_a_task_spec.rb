@@ -5,9 +5,9 @@ RSpec.describe "User can post a task" do
    fill_in "task[title]", with: "Test"
    fill_in "task[content]", with: "This is my new task."
    click_on "Post"
-   new_blog = Task.last
-   expect(new_blog.title).to eq("Test")
-   expect(new_blog.content).to eq("This is my new task")
+   new_task = Task.last
+   expect(task.title).to eq("Test")
+   expect(new_task.content).to eq("This is my new task")
    expect(current_path).to eq("/tasks/#{new_task.id}")
    expect(page).to have_content("This is my new task")
    expect(page).to have_content("Test")

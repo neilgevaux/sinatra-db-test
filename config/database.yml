@@ -1,0 +1,9 @@
+development:
+ adapter: postgresql
+ database: task-app-development
+test:
+ adapter: postgresql
+ database: task-app-test
+production:
+ adapter: postgresql
+ database: task-app-production
